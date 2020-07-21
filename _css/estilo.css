@@ -1,0 +1,391 @@
+@charset "UTF-8";
+@font-face{
+	font-family: 'Nova Square';
+	src: url(../_fontes/NovaSquare.ttf);
+}
+@font-face{
+	font-family: 'Ubuntu';
+	src: url(../_fontes/Ubuntu.ttf);
+}
+@font-face{
+    font-family: 'Hum777k';
+    src: url(../_fontes/hum777k.ttf);
+}
+@font-face{
+    font-family: 'Righteous';
+    src: url(../_fontes/Righteous-Regular.ttf);
+}
+body{
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: url(../_imagens/escritorio3.jpg) no-repeat fixed;
+	display: grid;
+}
+#cabecalho{
+    border-top: 4px solid #03d9ffff;
+    background: url("../_imagens/icone-cabecalho.png") no-repeat 180px 3px;
+    background-color: rgb(255,255,255);
+	width: 100%;
+}
+
+
+#menu-texto{
+    display: none;
+}
+
+#cabecalho2{
+	display: none;
+}
+
+#icone-menu{
+	display:none;
+}
+#imagem-cabecalho2{
+	display: none;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: right;
+    width: 30%;
+    list-style: none;
+    margin: 0 120px 0 auto;
+}
+#menu a{
+    text-decoration: none;
+}
+.pag li{
+    font-family: 'Nova Square', cursive;
+    font-size: 18px;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+    transition: box-shadow 0.6s;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    padding: 0px 20px;
+}
+.pag li:hover{
+  background-color: #03d9ffff;
+	color: white;
+	box-shadow: 0 4px 10px #2e2e2e;
+}
+
+
+
+#baner {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-row-gap: 50px;
+	justify-items: center;
+	text-align: center;
+    font-family: 'Nova Square';
+    color: rgb(107, 4, 167);
+    font-size: 25px;
+	transition: background-color 3s;
+	padding: 100px 0 300px;	
+}
+#slogan{
+	opacity: 0;
+	transition:  3s;
+	margin: 0 auto;
+	padding: 0 20px;
+} 
+h2{
+    text-align: center;
+    font-family: 'Righteous';
+    font-size: 30px;
+    color: darkviolet;
+    padding: 150px 20px;
+	margin: 0 auto;
+}
+section{
+	background-color: rgb(255, 255, 255);
+	display: grid;
+}
+p{
+	font-size: 16px;
+	padding: 0;
+}
+.duvida{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+	align-items: center;
+	padding: 50px 0;
+	width: 90%;
+	justify-self: center;
+	align-self: center;
+}
+
+.artigo{
+	color: rgb(101, 110, 235);
+	font-family: 'Hum777k';
+	width: 90%;
+	padding: 10px;
+	
+}
+.artigo > p{
+	font-size: 20px;
+}
+
+.artigo > h3{
+	color: rgb(93, 18, 126);
+	padding-bottom: 30px;
+	font-size: 30px;
+}
+h6{
+	display: none;
+}
+#comentario{
+	background-color: purple;
+	padding: 80px 0;
+}
+#comentario p{
+	font-family: 'Hum777k';
+	font-size: 20px;
+	color: white;
+	width: 50%;
+	margin: 0 auto;
+}
+.imagem{
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+
+#vantagens{
+	grid-template-rows: 1fr 2fr;
+}
+#tit {
+	width: 60%;
+}
+#vantagens > *{
+	justify-self: center;
+}
+
+#vantagens-artigos{
+	display: grid;
+	width: 90%;
+	grid-template-areas:
+	'v1 v2 v3';
+}
+
+#vantagem1{ grid-area: v1; }
+#vantagem2{ grid-area: v2; }
+#vantagen3{ grid-area: v3; }
+
+span, em{
+	color: rgb(102, 55, 102);
+}
+#conheca{
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	align-items: center;
+	justify-items: center;
+	padding-bottom: 100px;
+}
+#conheca > h4{
+	font-family: 'Hum777k';
+	font-size: 25px;
+	color: purple;
+	text-align: center;
+	width: 60%;
+}
+#conheca > a{
+	text-decoration: none;
+	
+}
+button{
+	padding: 15px;
+	font-family: 'Righteous', sans-serif;
+	font-size: 25px;
+	background-color: white;
+	color: blue;
+	border: 1.5px solid blue;
+	outline-style: none;	
+	transition: 1s ease;
+	
+}
+#botao:hover{
+	color: white;
+	background-color: blue;
+}
+#rodape{
+	width: 100%;
+	background-color: rgb(49, 1, 71);
+	color: white;
+	font-family: 'Righteous', sans-serif;
+	font-size: 15px;
+	display: grid;
+	grid-template-rows: 230px;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	justify-items: center;
+	grid-template-areas:
+	"lg ed tel";
+}
+#rodape-logo{
+	grid-area: lg;
+}
+#rodape-endereco{
+	grid-area: ed;
+	display: grid;
+	grid-template-columns: 80px 1fr;
+	justify-items: center;
+}
+#rodape-contatos{
+	grid-area: tel;
+}
+#rodape-contatos ul{
+	list-style: none;
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	grid-row-gap: 5px;
+	
+}
+#rodape-contatos > ul > li{
+	display: grid;
+	grid-template-columns: 40px 1fr;
+	align-items: center;
+}
+a{
+	text-decoration: none;
+    color: white;
+    outline: none;
+}
+
+#rodape-contatos a:hover, #rodape-endereco a:hover{
+	color:  rgb(28, 246, 253);
+}
+
+@media(max-width: 760px){
+	#interface{
+		width: 100%;		
+	}
+
+	.reduzido{
+		transform: scale(0.8);
+	}
+
+    #cabecalho{
+		background: none;
+        background-color: white; 
+		position: fixed;
+		z-index: 1;
+	}
+
+	.cabecalho2{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		
+	}
+
+	#icone-menu{
+		display: block;
+		width: 40px;
+		height: 35px;
+		margin: 10px;
+		padding: 0;
+		border: 1px solid black;
+		border-radius: 2px;
+		box-sizing: border-box;
+		cursor: pointer;
+		position: relative;
+	}
+
+	#imagem-cabecalho2{
+		display: flex;
+	}
+	
+	.icon{
+		border: 2px solid black;
+		border-radius: 2px;
+		width: 25px;
+		margin-top: 5px;
+		margin-left: 4.5px;
+	}
+	
+    #menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
+        width: 100%;
+        list-style: none;
+        margin: 0 auto;
+		padding: 0;
+		background-color: rgb(255,255,255);
+		transition: 1.5s;
+	}
+
+	.subir{
+		position: absolute;
+		top: -300px;
+	}
+
+	.descer{
+		position: absolute;
+		top: 55px;
+	}
+
+	#comentario p{
+		width: 90%;
+	}
+
+	#baner{
+		background-color: rgba(255, 255, 255, 0.6);
+	}
+	#slogan{
+		opacity: 1;
+	}
+
+
+	.duvida{
+		grid-template-columns: 1fr;
+		
+	}
+	
+	#vantagens-artigos{
+		display: grid;
+		grid-template-areas:
+		'v1'
+		'v2' 
+		'v3';
+	}
+
+	#conheca > a{
+		padding: 0 50px;
+		
+	}
+	
+    #rodape{
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        grid-template-areas:
+        "lg"
+        "ed"
+        "tel";
+        justify-content: center;
+        align-items: center;
+	    justify-items: center;
+    }
+    #rodape-logo{
+        grid-area: lg;
+        justify-self: center;
+        margin: 0 auto;
+    }
+    #rodape-endereco{
+        grid-area: ed;
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        justify-items: center;
+        justify-self: center;
+    }
+    #rodape-contatos{
+        grid-area: tel;
+        justify-self: center;
+    }
+}

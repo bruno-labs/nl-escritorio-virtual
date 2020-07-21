@@ -1,0 +1,332 @@
+@charset "UTF-8";
+@font-face{
+	font-family: 'Nova Square';
+	src: url(../_fontes/NovaSquare.ttf);
+}
+@font-face{
+	font-family: 'Ubuntu';
+	src: url(../fontes/Ubuntu.ttf);
+}
+@font-face{
+    font-family: 'Hum777k';
+    src: url(../_fontes/hum777k.ttf);
+}
+@font-face{
+    font-family: 'Righteous';
+    src: url(../_fontes/Righteous-Regular.ttf);
+}
+body{
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: url(../_imagens/escritorio3.jpg) no-repeat fixed;
+    display: grid;
+}
+#cabecalho{
+    border-top: 4px solid #03d9ffff;
+    background: url("../_imagens/icone-cabecalho.png") no-repeat 180px 3px;
+    background-color: rgb(255,255,255);
+}
+
+#cabecalho2{
+	display: none;
+}
+
+#icone-menu{
+	display:none;
+}
+#imagem-cabecalho2{
+	display: none;
+}
+
+#menu-texto{
+    display: none;
+}
+#menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: right;
+    width: 30%;
+    list-style: none;
+    margin: 0 120px 0 auto;
+}
+#menu a{
+    text-decoration: none;
+}
+.pag li{
+    font-family: 'Nova Square', cursive;
+    font-size: 18px;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+    transition: box-shadow 0.6s;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    padding: 0px 20px;
+}
+.pag li:hover{
+    background-color: #03d9ffff;
+	color: white;
+	box-shadow: 0 4px 10px #2e2e2e;
+}
+#baner {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-row-gap: 50px;
+	justify-items: center;
+	text-align: center;
+    font-family: 'Nova Square';
+    color: rgb(107, 4, 167);
+    font-size: 25px;
+	transition: background-color 3s;
+	padding: 100px 0 300px;	
+}
+#slogan{
+	opacity: 0;
+	transition: 3s;
+	margin: 0;
+}
+h2{
+    text-align: center;
+    font-family: 'Righteous';
+    font-size: 30px;
+    color: darkviolet;
+    width: 60%;
+    padding: 100px 0;
+	margin: 0 auto;
+}
+h3{
+    font-size: 25px;
+    color: rgb(238, 62, 200);
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Hum777k';
+    width: 60%;
+    margin: 0 auto;
+}
+
+#interface{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.3fr 2fr;
+}
+
+#contato{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'txt'
+    'mapa'
+    'txt2';
+    background-color: white;
+    padding-bottom: 100px;
+}
+
+#txt{
+    grid-area: txt;
+}
+
+#txt2{ grid-area: txt2; }
+
+#formulario{
+    padding: 40px;
+    grid-area: form;
+}
+
+
+#mapa{
+    grid-area: mapa;
+    padding: 40px;
+}
+#googleMap{
+    width: 90%;
+    height: 600px;
+    margin: 0 auto;
+    border: 2px solid purple;
+    box-shadow: 2px 2px 3px gray;
+}
+
+form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+form *{
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: border-box;
+}
+input{
+    height: 40px;
+}
+form button{
+    background-color: purple;
+    font-size: large;
+    color: white;
+    border: none;
+    transition: .5s;
+}
+form button:hover{
+    background-color: blue;
+    border-color: blue;
+    color: white;
+}
+
+textarea{
+    resize: none;
+}
+#rodape{
+	width: 100%;
+	background-color: rgb(49, 1, 71);
+	color: white;
+	font-family: 'Righteous', sans-serif;
+	font-size: 15px;
+	display: grid;
+	grid-template-rows: 230px;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	justify-items: center;
+	grid-template-areas:
+	"lg ed tel";
+}
+
+#rodape-logo{
+	grid-area: lg;
+}
+#rodape-endereco{
+	grid-area: ed;
+	display: grid;
+	grid-template-columns: 80px 1fr;
+	justify-items: center;
+}
+#rodape-contatos{
+	grid-area: tel;
+}
+#rodape-contatos ul{
+	list-style: none;
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	grid-row-gap: 5px; 
+}
+#rodape-contatos > ul > li{
+	display: grid;
+	grid-template-columns: 40px 1fr;
+	align-items: center;
+}
+a{
+	text-decoration: none;
+    color: white;
+    outline: none;
+}
+#rodape-contatos a:hover, #rodape-endereco a:hover{
+	color:  rgb(28, 246, 253);
+}
+
+@media(max-width: 760px){
+    #baner{
+		background-color: rgba(255, 255, 255, 0.6);
+	}
+	#slogan{
+		opacity: 1;
+	}
+
+    #interface{
+		width: 100%;		
+	}
+
+    #cabecalho{
+		background: none;
+        background-color: white; 
+        position: fixed;
+        width: 100%;
+	}
+
+	.cabecalho2{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	#icone-menu{
+		display: block;
+		width: 40px;
+		height: 35px;
+		margin: 10px;
+		padding: 0;
+		border: 1px solid black;
+		border-radius: 2px;
+		box-sizing: border-box;
+		cursor: pointer;
+		position: relative;
+	}
+
+	#imagem-cabecalho2{
+		display: flex;
+	}
+	
+	.icon{
+		border: 2px solid black;
+		border-radius: 2px;
+		width: 25px;
+		margin-top: 5px;
+		margin-left: 4.5px;
+	}
+	
+    #menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
+        width: 100%;
+        list-style: none;
+        margin: 0 auto;
+		padding: 0;
+		background-color: rgb(255,255,255);
+		transition: 1.5s;
+	}
+
+	.subir{
+		position: absolute;
+		top: -300px;
+	}
+
+	.descer{
+		position: absolute;
+		top: 55px;
+    }
+
+    #rodape{
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        grid-template-areas:
+        "lg"
+        "ed"
+        "tel";
+        justify-content: center;
+        align-items: center;
+	    justify-items: center;
+    }
+    #rodape-logo{
+        grid-area: lg;
+        justify-self: center;
+        margin: 0 auto;
+    }
+    #rodape-endereco{
+        grid-area: ed;
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        justify-items: center;
+        justify-self: center;
+    }
+    #rodape-contatos{
+        grid-area: tel;
+        justify-self: center;
+    }
+
+
+
+}

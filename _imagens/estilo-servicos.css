@@ -1,0 +1,283 @@
+@charset "UTF-8";
+@font-face{
+	font-family: 'Nova Square';
+	src: url(../_fontes/NovaSquare.ttf);
+
+}
+@font-face{
+	font-family: 'Ubuntu';
+	src: url(../fontes/Ubuntu.ttf);
+}
+@font-face{
+    font-family: 'Hum777k';
+    src: url(../_fontes/hum777k.ttf);
+}
+@font-face{
+    font-family: 'Righteous';
+    src: url(../_fontes/Righteous-Regular.ttf);
+}
+body{
+    box-sizing: border-box;
+    margin: 0 auto;
+    background: url(../_imagens/escritorio3.jpg) no-repeat fixed;
+    display: grid;
+
+}
+
+#cabecalho{
+    border-top: 4px solid #03d9ffff;
+    background: url("../_imagens/icone-cabecalho.png") no-repeat 180px 3px;
+    background-color: rgb(255,255,255);
+}
+
+#menu-texto{
+    display: none;
+}
+#menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: right;
+    width: 30%;
+    list-style: none;
+    margin: 0 120px 0 auto;
+}
+#menu a{
+    text-decoration: none;
+}
+.pag li{
+    font-family: 'Nova Square', cursive;
+    font-size: 18px;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+    transition: box-shadow 0.6s;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    padding: 0px 20px;
+}
+.pag li:hover{
+  background-color: #03d9ffff;
+	color: white;
+	box-shadow: 0 4px 10px #2e2e2e;
+}
+#baner {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-row-gap: 50px;
+	justify-items: center;
+	text-align: center;
+    font-family: 'Nova Square';
+    color: rgb(107, 4, 167);
+    font-size: 22px;
+	transition: background-color 4s;
+	padding: 100px 0 300px;	
+}
+
+#slogan{
+	opacity: 0;
+	transition: 5s;
+}
+section{
+    background-color: white;
+}
+
+#servicos{
+    display: grid;
+    grid-template-areas: 
+    's1'
+    's2'
+    's3';
+    padding: 100px 0;
+    grid-row-gap: 200px;    
+}
+#s1{ grid-area: s1;}
+#s2{ grid-area: s2;}
+
+.novo-servico{
+    display: grid;
+    grid-template-rows: 300px 3fr;
+    margin: 0 auto;
+}
+.imagem-servico {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+}
+.imagem-creditos{
+    display: none;
+} 
+.novo-servico > article{
+	color: rgb(101, 110, 235);
+    font-family: 'Hum777k';
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+}
+.novo-servico > article > p{
+	font-size: 18px;
+}
+.novo-servico > article > h2{
+	color: rgb(93, 18, 126);
+    font-size: 35px;
+    text-align: center;	
+}
+h3{
+    color: rgb(93, 18, 126);
+	font-size: 25px;	
+}
+
+span, em{
+	color: rgb(102, 55, 102);
+}
+
+.isca{
+    text-align: center;
+    padding-top: 100px;
+}
+.definicao{
+    font-size: 25px;
+    color: rgb(238, 62, 200);
+    text-align: center;
+    padding: 30px 0;
+}
+
+
+#conheca{
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	align-items: center;
+	justify-items: center;
+	padding-bottom: 100px;
+}
+
+
+#conheca > h4{
+	font-family: 'Hum777k';
+	font-size: 25px;
+	color: purple;
+	text-align: center;
+	width: 60%;
+}
+#conheca > a{
+	text-decoration: none;
+}
+button{
+	padding: 15px;
+	font-family: 'Righteous', sans-serif;
+	font-size: 25px;
+	background-color: white;
+	color: blue;
+	border: 1.5px solid blue;
+	outline-style: none;	
+	transition: 1s ease;
+}
+#botao:hover{
+	color: white;
+	background-color: blue;
+}
+
+#rodape{
+	width: 100%;
+	background-color: rgb(49, 1, 71);
+	color: white;
+	font-family: 'Righteous', sans-serif;
+	font-size: 15px;
+	display: grid;
+	grid-template-rows: 230px;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	justify-items: center;
+	grid-template-areas:
+	"lg ed tel"
+	;
+
+}
+#rodape-logo{
+	grid-area: lg;
+}
+#rodape-endereco{
+	grid-area: ed;
+	display: grid;
+	grid-template-columns: 80px 1fr;
+	justify-items: center;
+}
+
+#rodape-contatos{
+	grid-area: tel;
+}
+#rodape-contatos ul{
+	list-style: none;
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	grid-row-gap: 5px; 
+}
+#rodape-contatos > ul > li{
+	display: grid;
+	grid-template-columns: 40px 1fr;
+	align-items: center;
+}
+
+
+a{
+	text-decoration: none;
+    color: white;
+    outline: none;
+}
+
+#rodape-contatos a:hover, #rodape-endereco a:hover{
+	color:  rgb(28, 246, 253);
+}
+
+@media(max-width: 760px){
+
+    #cabecalho{
+        background: none;
+        background-color: white; 
+    }
+
+    #menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
+        width: 100%;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #baner{
+		background-color: rgba(255, 255, 255, 0.6);
+	}
+	#slogan{
+		opacity: 1;
+	}
+
+    #rodape{
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        grid-template-areas:
+        "lg"
+        "ed"
+        "tel";
+        justify-content: center;
+        align-items: center;
+	    justify-items: center;
+    }
+    #rodape-logo{
+        grid-area: lg;
+        justify-self: center;
+        margin: 0 auto;
+    }
+    #rodape-endereco{
+        grid-area: ed;
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        justify-items: center;
+        justify-self: center;
+    }
+    #rodape-contatos{
+        grid-area: tel;
+        justify-self: center;
+    }
+}
